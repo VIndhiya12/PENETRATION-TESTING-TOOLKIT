@@ -1,1 +1,2 @@
 # PENETRATION-TESTING-TOOLKIT
+DESCRIPTION:This project is a basic penetration testing toolkit developed in Python as part of the CODTECH Cybersecurity Internship. It includes two simple modules: a Port Scanner to check open and closed ports on a given IP address, and a Brute-Force Password Simulator that attempts to guess a password from a small predefined list. The tool is designed for learning purposes, runs directly in Google Colab without any extra installation, and the code is stored in a GitHub repository for submission and version control.
