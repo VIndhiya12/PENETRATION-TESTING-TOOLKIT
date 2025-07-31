@@ -1,0 +1,39 @@
+import socket
+import time
+def port_scanner():
+    ip = input("Enter target IP address: ")
+    print("Scanning ports 20 to 25...")
+    for port in range(20, 26):
+        s = socket.socket()
+        s.settimeout(0.5)
+        try:
+            s.connect((ip, port))
+            print(f"Port {port} is OPEN")
+        except:
+            print(f"Port {port} is CLOSED")
+        s.close()
+def brute_force_demo():
+    password_list = ["1234", "admin", "pass", "root", "admin123"]
+    correct_password = "admin123"
+    
+    print("\nStarting brute-force password simulation...")
+    for pwd in password_list:
+        print(f"Trying: {pwd}")
+        time.sleep(0.5)
+        if pwd == correct_password:
+            print(f"✔ Password found: {pwd}")
+            return
+    print("❌ Password not found.")
+def main():
+    print("Penetration Testing Toolkit")
+    print("1. Port Scanner")
+    print("2. Brute Force Demo")
+    choice = input("Choose tool (1 or 2): ")
+    
+    if choice == "1":
+        port_scanner()
+    elif choice == "2":
+        brute_force_demo()
+    else:
+        print("Invalid choice.")
+main()
